@@ -33,7 +33,9 @@
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
-  "MetaData":{},
+  "MetaData":{
+    "IDEVersion":"2024.8.1.171",
+  },
   "name":"td-parallax-gamemakerstation",
   "resources":[
     {"id":{"name":"oCollision","path":"objects/oCollision/oCollision.yy",},},

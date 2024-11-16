@@ -13,7 +13,7 @@ const float parallax_amount = 0.5;
 
 void main()
 {
-    vec4 object_space_pos = vec4( in_Position.x, in_Position.y, in_Position.z, 1.0);
+  vec4 object_space_pos = vec4(in_Position.x, in_Position.y, in_Position.z, 1.0);
 	
 	// Camera position
 	mat4 viewMatrix = gm_Matrices[MATRIX_VIEW];
@@ -28,10 +28,10 @@ void main()
 	// Apply
 	object_space_pos.xy += offset * parallax_amount * height;
 	
-    gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;
-    
-    v_vColour = in_Colour;
-    v_vTexcoord = in_TextureCoord;
+  gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;
+  
+  v_vColour = in_Colour;
+  v_vTexcoord = in_TextureCoord;
 	
 	// Shading
 	v_vColour.rgb *= 1. + (height * parallax_amount) * 2.5;
